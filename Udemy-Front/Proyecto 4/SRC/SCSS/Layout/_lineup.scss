@@ -1,0 +1,33 @@
+@use '../variables/variables' as *;
+@use '../variables/mixins' as *;
+
+.lineup{
+    background-color: $rosa;
+    h3, .dia{
+        text-align: center;
+        color: $blanco;
+        text-transform: uppercase;
+    }
+
+    .dia{
+        font-size: 3rem;
+    }
+}
+
+.escenarios-contenedor{   
+    @include contenedor;
+    @include tablet{
+        @include grid(2, 5rem)
+    }
+}
+
+.escenario p{
+    padding: 1.5rem 0 0 0;
+}
+
+.nombre-escenario{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}

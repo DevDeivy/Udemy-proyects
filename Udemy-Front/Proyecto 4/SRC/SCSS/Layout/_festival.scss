@@ -1,0 +1,47 @@
+@use '../variables/variables' as *;
+@use '../variables/mixins' as *;
+
+.sobre-festival{
+    @include contenedor;
+
+    @include tablet{
+        @include grid(2, 2rem); // agregando mixin  grid
+    }
+}
+
+.contenido-festival{
+    margin-top: 5rem;
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .fecha{
+        color: $verde;
+        font-weight: bold;
+    }
+}
+
+li{
+    font-weight: 700;
+    padding: 2.5rem;
+    
+    span{
+        font-weight: normal;
+    }
+}
+
+
+.bg-amarillo{
+    background-color: $amarillo;
+    li:nth-child(odd){
+        background-color: lighten($amarillo, 5%); //odd = impar
+    }
+}
+
+.bg-verde{
+    background-color: $verde;
+    background-color: $verde;
+    li:nth-child(odd){
+        background-color: lighten($verde, 5%); //odd = impar
+    }
+}

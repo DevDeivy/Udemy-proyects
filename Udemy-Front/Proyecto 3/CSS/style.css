@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+:root{
+    --fuente--headign: 'PT Sans', sans-serif;
+    --fuente--parrafos: 'Open sans', sans-serif;
+
+    --color--primario: #784D3C;
+    --claro: #e1e1e1;
+    --blanco: #fff;
+    --negro: #000;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente--parrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globals*/
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuente--headign);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+}
+
+h4{
+    font-size: 2.8rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*utilidades*/
+
+.centrar_texto{
+    text-align: center;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+/*header*/
+
+/* 
+.webp .header{
+    background: url('/img/banner.webp') no-repeat;
+}
+
+.no-webp .header{
+    background: url('/img/banner.jpg') no-repeat;
+} 
+*/
+
+.header{
+    background: url('/img/banner.jpg') no-repeat;
+    height: 40rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px){
+    .header{
+        height: 60rem;
+    }
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+.header__texto h2{
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+}
+
+.header__texto p{
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px){
+    .header__texto{
+        margin-top: 15rem;
+
+        & p{
+            font-size: 1.8rem;
+        }
+
+        & h2{
+            font-size: 4rem;
+        }
+    }
+}
+
+/*barra*/
+@media (min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    color: var(--blanco);
+    margin: 0;
+    text-align: center;
+}
+
+.logo__nombre{
+    font-weight: normal;
+    padding: 2rem 0;
+}
+
+.logo__bold{
+    font-weight: bold;
+}
+
+/*navegacion*/
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px){
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/*Contenido Principal*/
+@media (min-width: 768px){
+    .contenido-pricipal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--claro);
+    margin-bottom: 2rem;
+}
+
+.entrada:nth-child(4){/*or last-of-type*/
+    border: none;
+    margin: 0;
+}
+
+.entrada__contenido h4{
+    line-height: 0;
+    text-align: center;
+}
+ 
+@media (min-width: 768px){
+    .entrada__contenido h4{
+        text-align: left;
+    }
+}
+
+/*Botones*/
+.boton{
+    display: block;
+    font-family: var(--fuente--headign);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boton--leer{
+    background-color: var(--negro);
+}
+
+.boton--secundario{
+    background-color: var(--color--primario);
+}
+
+/*Cursos*/
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 1px solid var(--claro);
+}
+
+.widget-curso:last-of-type{
+    border: none;
+}
+
+.widget-curso__info{
+    font-weight: normal;
+}
+
+.widget-curso__label{
+    font-family: var(--fuente--headign);
+    font-weight: bold;
+}
+
+.footer{
+    background-color: var(--negro);
+    margin-top: 4rem;
+}
+
+/*Nosotros*/
+@media (min-width: 768px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .sobre-nosotros p{
+        margin: 0;
+        text-align: justify;
+    }
+}
+
+/*Curso*/
+.curso{
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--claro);
+}
+
+.curso:last-of-type{
+    border: none;
+}
+
+@media (min-width: 768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+
+    .curso__label{
+        font-weight: bold;
+    }
+
+    .curso__info{
+        font-weight: normal;
+    }
+}
+
+/*Contacto*/
+.contacto__background{
+    background: url('../img/contacto.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 90%;
+    border-radius: .5rem;
+    padding: 5rem;
+}
+
+.campo{
+    display: flex;
+    padding: 1rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+}
+
+.campo__field{
+    flex: 1;
+}
+
+.campo__field--textarea{
+    height: 20rem;
+}
+
+.campo-boton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5rem 3rem;
+}  
+
+@media (min-width: 768px){
+    .campo-boton{
+        padding: 0 1rem ;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }    
+}
